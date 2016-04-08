@@ -158,9 +158,9 @@ print "The estimated price for a house with %d squarefeet is $%.2f" % (my_house_
 
 def get_residual_sum_of_squares(input_feature, output, intercept, slope):
     # First get the predictions
-    predicitions = get_regression_predictions(input_feature, intercept, slope)
+    predictions = get_regression_predictions(input_feature, intercept, slope)
     # then compute the residuals (since we are squaring it doesn't matter which order you subtract)
-    residuals = predicitions - output
+    residuals = predictions - output
     # square the residuals and add them up
     resid_sq = residuals*residuals
     RSS = resid_sq.sum()
